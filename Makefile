@@ -35,7 +35,7 @@ endif
 EPILOGUE_PROCESS := 1
 
 # Update the README after build
-UPDATE_README ?= 1
+UPDATE_README ?= 0
 
 BUILD_DIR := build/$(NAME).$(VERSION)
 ifeq ($(EPILOGUE_PROCESS),1)
@@ -86,7 +86,6 @@ ifeq ($(WINDOWS),1)
   WINE :=
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as.exe
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp.exe -P
-  PYTHON  := python
 else
   WINE ?= wine
   # Disable wine debug output for cleanliness
@@ -95,7 +94,6 @@ else
   DEVKITPPC ?= /opt/devkitpro/devkitPPC
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
-  PYTHON  := python3
 endif
 CC      = $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
 ifeq ($(EPILOGUE_PROCESS),1)
@@ -104,6 +102,7 @@ endif
 LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 SHA1SUM := sha1sum
+PYTHON  := python
 
 FRANK := tools/franklite.py
 
@@ -120,7 +119,7 @@ ifeq ($(VERBOSE),0)
 # this set of LDFLAGS generates no warnings.
 LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
 endif
-CFLAGS  := -Cpp_exceptions off -enum int -inline auto -proc gekko -RTTI off -fp hard -fp_contract on -rostr -O4,p -use_lmw_stmw on -common on -sdata 8 -sdata2 8 -nodefaults -DVERNUM=$(VERNUM) $(INCLUDES)
+CFLAGS   = -Cpp_exceptions off -enum int -inline auto -proc gekko -RTTI off -fp hard -fp_contract on -rostr -O4,p -use_lmw_stmw on -sdata 8 -sdata2 8 -nodefaults $(INCLUDES)
 
 ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
@@ -135,34 +134,19 @@ $(BUILD_DIR)/src/Dolphin/__ppc_eabi_init.o: MWCC_VERSION := 1.2.5
 $(BUILD_DIR)/src/Dolphin/OSLink.o: MWCC_VERSION := 1.2.5
 $(BUILD_DIR)/src/Dolphin/PPCArch.o: MWCC_VERSION := 1.2.5
 $(BUILD_DIR)/src/Dolphin/vec.o: MWCC_VERSION := 1.2.5
-$(BUILD_DIR)/src/Dolphin/GBA.o: MWCC_VERSION := 1.2.5
-$(BUILD_DIR)/src/Dolphin/GBARead.o: MWCC_VERSION := 1.2.5
-$(BUILD_DIR)/src/Dolphin/GBAWrite.o: MWCC_VERSION := 1.2.5
 $(BUILD_DIR)/src/Dolphin/GDBase.o: MWCC_VERSION := 1.2.5
 $(BUILD_DIR)/src/Dolphin/SISamplingRate.o: MWCC_VERSION := 1.2.5
 $(BUILD_DIR)/src/Dolphin/fstload.o: MWCC_VERSION := 1.2.5
 $(BUILD_DIR)/src/Dolphin/db.o: MWCC_VERSION := 1.2.5
 $(BUILD_DIR)/src/Dolphin/OSAudioSystem.o: MWCC_VERSION := 1.2.5
-$(BUILD_DIR)/src/Dolphin/OSAlloc.o: MWCC_VERSION := 1.2.5
-$(BUILD_DIR)/src/Dolphin/OS.o: MWCC_VERSION := 1.2.5
 
 # Dirty hack to overwrite sdata
-# It seems TRK-related files need -sdata 0
 $(BUILD_DIR)/src/Dolphin/main_TRK.o: CFLAGS += -sdata 0
-$(BUILD_DIR)/src/Dolphin/mainloop.o: CFLAGS += -sdata 0
-$(BUILD_DIR)/src/Dolphin/nubinit.o: CFLAGS += -sdata 0
 $(BUILD_DIR)/src/Dolphin/target_options.o: CFLAGS += -sdata 0
-
 # Disable read-only strings
-$(BUILD_DIR)/src/Dolphin/SISamplingRate.o: CFLAGS += -str noreadonly
-$(BUILD_DIR)/src/Dolphin/fstload.o: CFLAGS += -str noreadonly
-$(BUILD_DIR)/src/Dolphin/db.o: CFLAGS += -str noreadonly
-$(BUILD_DIR)/src/Dolphin/OS.o: CFLAGS += -str noreadonly
-$(BUILD_DIR)/src/Dolphin/GBA.o: CFLAGS += -str noreadonly
-
-# Disable common BSS pool
-$(DOLPHIN): CFLAGS += -common off
-
+$(BUILD_DIR)/src/Dolphin/SISamplingRate.o: CFLAGS := -Cpp_exceptions off -enum int -inline auto -proc gekko -RTTI off -fp hard -fp_contract on -O4,p -use_lmw_stmw on -sdata 8 -sdata2 8 -nodefaults $(INCLUDES)
+$(BUILD_DIR)/src/Dolphin/fstload.o: CFLAGS := -Cpp_exceptions off -enum int -inline auto -proc gekko -RTTI off -fp hard -fp_contract on -O4,p -use_lmw_stmw on -sdata 8 -sdata2 8 -nodefaults $(INCLUDES)
+$(BUILD_DIR)/src/Dolphin/db.o: CFLAGS := -Cpp_exceptions off -enum int -inline auto -proc gekko -RTTI off -fp hard -fp_contract on -O4,p -use_lmw_stmw on -sdata 8 -sdata2 8 -nodefaults $(INCLUDES)
 # Enable string pooling
 $(BUILD_DIR)/src/Dolphin/locale.o: CFLAGS += -str pool
 
@@ -196,12 +180,12 @@ $(LDSCRIPT): ldscript.lcf
 
 $(DOL): $(ELF) | tools
 	$(QUIET) $(ELF2DOL) $< $@
-	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
+	# $(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
 ifneq ($(findstring -map,$(LDFLAGS)),)
-	$(QUIET) $(PYTHON) tools/calcprogress.py $(DOL) $(MAP)
+    # $(QUIET) $(PYTHON) tools/calcprogress.py $(DOL) $(MAP)
 endif
 ifeq ($(UPDATE_README),1)
-	$(WINE) $(READMEGEN)
+    $(WINE) $(READMEGEN)
 endif
 
 clean:
@@ -258,20 +242,6 @@ $(EPILOGUE_DIR)/%.o: %.cpp $(BUILD_DIR)/%.o
 endif
 # If we need Frank, add the following after the @echo
 # $(QUIET) $(CC_EPI) $(CFLAGS) -c -o $@ $<
-
-### Extremely lazy recipes for generating context ###
-# Example usage: make build/pikmin2.usa/src/plugProjectYamashitaU/farmMgr.h
-$(BUILD_DIR)/%.h: %.c
-	@echo "Compiling and generating context for " $<
-	$(QUIET) $(CC) $(CFLAGS) -E -c -o $@ $<
-
-$(BUILD_DIR)/%.h: %.cp
-	@echo "Compiling and generating context for " $<
-	$(QUIET) $(CC) $(CFLAGS) -E -c -o $@ $<
-	
-$(BUILD_DIR)/%.h: %.cpp
-	@echo "Compiling and generating context for " $<
-	$(QUIET) $(CC) $(CFLAGS) -E -c -o $@ $<
 
 ### Debug Print ###
 

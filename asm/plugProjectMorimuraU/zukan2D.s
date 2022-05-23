@@ -916,6 +916,7 @@ mCategoryArray__Q28Morimura10TItemZukan: # treasure id of final category member
 	.4byte 183	# Odd Logo Series
 	.4byte 196	# Explorer's Friend Series
 	.4byte 201	# Titan Dweevil Series
+	.4byte 216	# woo hoo decomp
 .global eIDInfo__8Morimura
 eIDInfo__8Morimura:
 	.4byte 0x00000000
