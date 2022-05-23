@@ -2703,7 +2703,7 @@ lbl_802A3C78:
 /* 802A3CC8 002A0C08  EC 82 01 F2 */	fmuls f4, f2, f7
 /* 802A3CCC 002A0C0C  90 01 00 4C */	stw r0, 0x4c(r1)
 /* 802A3CD0 002A0C10  EC 66 28 FA */	fmadds f3, f6, f3, f5
-/* 802A3CD4 002A0C14  38 03 49 50 */	addi r0, r3, __vt__Q24Game20InteractHanaChirashi@l
+/* 802A3CD4 002A0C14  38 03 49 50 */	addi r0, r3, __vt__Q24Game12InteractFire@l
 /* 802A3CD8 002A0C18  EC 22 00 72 */	fmuls f1, f2, f1
 /* 802A3CDC 002A0C1C  93 C1 00 50 */	stw r30, 0x50(r1)
 /* 802A3CE0 002A0C20  7F A3 EB 78 */	mr r3, r29

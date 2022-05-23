@@ -35,7 +35,7 @@ endif
 EPILOGUE_PROCESS := 1
 
 # Update the README after build
-UPDATE_README ?= 1
+UPDATE_README ?= 0
 
 BUILD_DIR := build/$(NAME).$(VERSION)
 ifeq ($(EPILOGUE_PROCESS),1)
@@ -102,7 +102,7 @@ endif
 LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 SHA1SUM := sha1sum
-PYTHON  := python3
+PYTHON  := python
 
 FRANK := tools/franklite.py
 
@@ -180,12 +180,12 @@ $(LDSCRIPT): ldscript.lcf
 
 $(DOL): $(ELF) | tools
 	$(QUIET) $(ELF2DOL) $< $@
-	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
+	# $(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
 ifneq ($(findstring -map,$(LDFLAGS)),)
-	$(QUIET) $(PYTHON) tools/calcprogress.py $(DOL) $(MAP)
+    # $(QUIET) $(PYTHON) tools/calcprogress.py $(DOL) $(MAP)
 endif
 ifeq ($(UPDATE_README),1)
-	$(WINE) $(READMEGEN)
+    $(WINE) $(READMEGEN)
 endif
 
 clean:

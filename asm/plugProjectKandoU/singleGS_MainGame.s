@@ -266,11 +266,11 @@ lbl_80519FE4:
 lbl_80519FE8:
 	.float 900.0
 lbl_80519FEC: # Louie Start X
-	.float -1260.0
+	.float 290.0
 lbl_80519FF0: # Louie Start Y
-	.float -80.0
+	.float -57.0
 lbl_80519FF4: # Louie Start Z
-	.float 4350.0
+	.float -2985.0
 lbl_80519FF8:
 	.float 7.6969023
 lbl_80519FFC:
