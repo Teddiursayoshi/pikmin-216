@@ -2693,7 +2693,7 @@ lbl_80153168:
 /* 80153180 001500C0  41 82 00 18 */	beq lbl_80153198
 /* 80153184 001500C4  40 80 00 A0 */	bge lbl_80153224
 /* 80153188 001500C8  48 00 01 B4 */	b lbl_8015333C
-lbl_8015318C:lbl_8015318C:
+lbl_8015318C:
 li r15, 0
 cmpwi r0, 2
 bne WEATHER_END
@@ -2813,7 +2813,7 @@ cmpwi r15, 0x5b
 beq PERP
 WILD:
      sth r5,0xc(r3)
-     b END_WE,
+     b END_WE
 PERP:
      sth r15,0xc(r3)
 END_WE:
