@@ -71,6 +71,8 @@ struct MovieContext : public CNode {
 struct MoviePlayer {
 	virtual ~MoviePlayer(); // _00
 
+	void skip();
+	
 	// _00 VTBL
 	u8 _004[0x14];
 	int m_demoState;

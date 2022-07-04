@@ -14,7 +14,7 @@ CaveTitleMsg CaveTitleMsg [45] = {
     {'f_01', 0, '8396_00', true , false, false, true , 0},
     {'f_02', 0, '8398_00', false, false, false, true , 0},
     {'f_03', 0, '8401_00', true , true , true , false, 0},
-    {'f_04', 0, '8410_00', false, true , false, false, 0},
+    {'f_04', 0, '8410_00', false, true , true , false, 0},
     {'y_01', 0, '8397_00', true , false, false, true , 0},
     {'y_02', 0, '8402_00', false, false, true , false, 0},
     {'y_03', 0, '8403_00', true , false, true , true , 0},
