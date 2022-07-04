@@ -2669,7 +2669,7 @@ lbl_802815C8:
 /* 80281610 0027E550  EC E8 38 BA */	fmadds f7, f8, f2, f7
 /* 80281614 0027E554  EC 37 18 7A */	fmadds f1, f23, f1, f3
 /* 80281618 0027E558  EC 45 20 BA */	fmadds f2, f5, f2, f4
-/* 8028161C 0027E55C  38 03 49 74 */	addi r0, r3, __vt__Q24Game12InteractWind@l
+/* 8028161C 0027E55C  38 03 49 74 */	addi r0, r3, __vt__Q24Game16InteractAstonish@l
 /* 80281620 0027E560  EC 67 01 B2 */	fmuls f3, f7, f6
 /* 80281624 0027E564  93 E1 00 50 */	stw r31, 0x50(r1)
 /* 80281628 0027E568  EC 27 00 72 */	fmuls f1, f7, f1

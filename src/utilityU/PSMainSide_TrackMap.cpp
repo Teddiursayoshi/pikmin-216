@@ -564,7 +564,7 @@ lbl_80471F84:
 
 lbl_80471F88:
 	clrlwi   r0, r30, 0x18
-	cmplwi   r0, 0x20
+	cmplwi   r0, 0x40
 	blt      lbl_80471AD4
 	mr       r6, r28
 	addi     r3, r31, 0
@@ -965,7 +965,7 @@ BgmTrackMapFile::@28 @~BgmTrackMapFile()
 {
 	/*
 	addi     r3, r3, -28
-	b        __dt__Q23PSM15BgmTrackMapFileFv
+	bl Q23PSM15BgmTrackMapFile
 	*/
 }
 } // namespace PSM

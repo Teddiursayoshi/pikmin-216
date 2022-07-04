@@ -2257,7 +2257,7 @@ lbl_friends:
 /* 80149180 001460C0  48 00 00 14 */	b lbl_80149194
 lbl_80149184:
 cmpwi r0, 5
-beq lbl_bulbies
+beq lbl_friends
 /* 80149184 001460C4  2C 00 00 03 */	cmpwi r0, 3
 /* 80149188 001460C8  40 82 00 0C */	bne lbl_80149194
 /* 8014918C 001460CC  C0 03 10 38 */	lfs f0, 0x1038(r3)
