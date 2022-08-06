@@ -2341,13 +2341,13 @@ lbl_802FDD70:
 /* 802FDD70 002FACB0  80 DF 00 C0 */	lwz r6, 0xc0(r31)
 /* 802FDD74 002FACB4  3C A0 80 4B */	lis r5, __vt__Q24Game11Interaction@ha
 /* 802FDD78 002FACB8  3C 80 80 4B */	lis r4, __vt__Q24Game12InteractFire@ha
-/* 802FDD7C 002FACBC  3C 60 80 4B */	lis r3, __vt__Q24Game12InteractBomb@ha
+/* 802FDD7C 002FACBC  3C 60 80 4B */	lis r3, __vt__Q24Game12InteractFire@ha
 /* 802FDD80 002FACC0  C0 26 06 04 */	lfs f1, 0x604(r6)
 /* 802FDD84 002FACC4  38 05 A3 00 */	addi r0, r5, __vt__Q24Game11Interaction@l
 /* 802FDD88 002FACC8  C0 02 F1 00 */	lfs f0, lbl_8051D460@sda21(r2)
 /* 802FDD8C 002FACCC  38 A4 49 74 */	addi r5, r4, __vt__Q24Game12InteractFire@l
 /* 802FDD90 002FACD0  90 01 00 20 */	stw r0, 0x20(r1)
-/* 802FDD94 002FACD4  38 03 49 50 */	addi r0, r3, __vt__Q24Game12InteractBomb@l
+/* 802FDD94 002FACD4  38 03 49 50 */	addi r0, r3, __vt__Q24Game12InteractFire@l
 /* 802FDD98 002FACD8  7F 83 E3 78 */	mr r3, r28
 /* 802FDD9C 002FACDC  38 81 00 20 */	addi r4, r1, 0x20
 /* 802FDDA0 002FACE0  90 A1 00 20 */	stw r5, 0x20(r1)
@@ -2501,9 +2501,9 @@ lbl_802FDF9C:
 /* 802FDFC0 002FAF00  EF DE 00 32 */	fmuls f30, f30, f0
 /* 802FDFC4 002FAF04  EC 42 00 32 */	fmuls f2, f2, f0
 /* 802FDFC8 002FAF08  38 03 49 74 */	addi r0, r3, __vt__Q24Game12InteractFire@l
-/* 802FDFCC 002FAF0C  3C 60 80 4B */	lis r3, __vt__Q24Game12InteractBomb@ha
+/* 802FDFCC 002FAF0C  3C 60 80 4B */	lis r3, __vt__Q24Game12InteractFire@ha
 /* 802FDFD0 002FAF10  90 01 00 40 */	stw r0, 0x40(r1)
-/* 802FDFD4 002FAF14  38 03 49 50 */	addi r0, r3, __vt__Q24Game12InteractBomb@l
+/* 802FDFD4 002FAF14  38 03 49 50 */	addi r0, r3, __vt__Q24Game12InteractFire@l
 /* 802FDFD8 002FAF18  7F E3 FB 78 */	mr r3, r31
 /* 802FDFDC 002FAF1C  93 C1 00 44 */	stw r30, 0x44(r1)
 /* 802FDFE0 002FAF20  38 81 00 40 */	addi r4, r1, 0x40
@@ -2584,7 +2584,7 @@ lbl_802FE0F8:
 /* 802FE0F8 002FB038  80 BE 00 C0 */	lwz r5, 0xc0(r30)
 /* 802FE0FC 002FB03C  3C 80 80 4B */	lis r4, __vt__Q24Game11Interaction@ha
 /* 802FE100 002FB040  C0 02 F1 04 */	lfs f0, lbl_8051D464@sda21(r2)
-/* 802FE104 002FB044  3C 60 80 4B */	lis r3, __vt__Q24Game12InteractFire@ha
+/* 802FE104 002FB044  3C 60 80 4B */	lis r3, __vt__Q24Game12InteractBomb@ha
 /* 802FE108 002FB048  C0 25 06 04 */	lfs f1, 0x604(r5)
 /* 802FE10C 002FB04C  38 04 A3 00 */	addi r0, r4, __vt__Q24Game11Interaction@l
 /* 802FE110 002FB050  C0 42 F0 58 */	lfs f2, lbl_8051D3B8@sda21(r2)
@@ -2592,7 +2592,7 @@ lbl_802FE0F8:
 /* 802FE118 002FB058  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802FE11C 002FB05C  EF DE 00 32 */	fmuls f30, f30, f0
 /* 802FE120 002FB060  EC 42 00 32 */	fmuls f2, f2, f0
-/* 802FE124 002FB064  38 03 49 74 */	addi r0, r3, __vt__Q24Game12InteractFire@l
+/* 802FE124 002FB064  38 03 49 74 */	addi r0, r3, __vt__Q24Game12InteractBomb@l
 /* 802FE128 002FB068  3C 60 80 4B */	lis r3, __vt__Q24Game12InteractBomb@ha
 /* 802FE12C 002FB06C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802FE130 002FB070  38 03 49 50 */	addi r0, r3, __vt__Q24Game12InteractBomb@l

@@ -927,11 +927,11 @@ interactCreature__Q34Game5Wtank3ObjFPQ24Game8Creature:
 /* 8027D0F0 0027A030  3C C0 80 4B */	lis r6, __vt__Q24Game11Interaction@ha
 /* 8027D0F4 0027A034  7C 88 23 78 */	mr r8, r4
 /* 8027D0F8 0027A038  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8027D0FC 0027A03C  3C A0 80 4B */	lis r5, __vt__Q24Game14InteractBubble@ha
+/* 8027D0FC 0027A03C  3C A0 80 4B */	lis r5, __vt__Q24Game11InteractGas@ha
 /* 8027D100 0027A040  38 C6 A3 00 */	addi r6, r6, __vt__Q24Game11Interaction@l
 /* 8027D104 0027A044  38 81 00 08 */	addi r4, r1, 8
 /* 8027D108 0027A048  80 E3 00 C0 */	lwz r7, 0xc0(r3)
-/* 8027D10C 0027A04C  38 05 48 30 */	addi r0, r5, __vt__Q24Game14InteractBubble@l
+/* 8027D10C 0027A04C  38 05 48 30 */	addi r0, r5, __vt__Q24Game11InteractGas@l
 /* 8027D110 0027A050  C0 07 06 04 */	lfs f0, 0x604(r7)
 /* 8027D114 0027A054  90 C1 00 08 */	stw r6, 8(r1)
 /* 8027D118 0027A058  90 61 00 0C */	stw r3, 0xc(r1)
