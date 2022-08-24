@@ -867,7 +867,7 @@ setupResources__Q34Game12PelletNumber3MgrFv:
 /* 801F9714 001F6654  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 801F9718 001F6658  4B E8 A1 C1 */	bl newSharedDisplayList__12J3DModelDataFUl
 /* 801F971C 001F665C  7F E3 FB 78 */	mr r3, r31
-/* 801F9720 001F6660  38 80 00 40 */	li r4, 0x40
+/* 801F9720 001F6660  38 80 00 40 */	li r4, 0x10
 /* 801F9724 001F6664  3C A0 00 08 */	lis r5, 8
 /* 801F9728 001F6668  4B F7 2E C5 */	bl useModelMgr__Q24Game13BasePelletMgrFiUl
 /* 801F972C 001F666C  38 7F 00 18 */	addi r3, r31, 0x18
