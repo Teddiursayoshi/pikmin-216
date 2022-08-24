@@ -832,7 +832,7 @@ setupResources__Q34Game12PelletNumber3MgrFv:
 /* 801F9688 001F65C8  80 6D 9A EC */	lwz r3, sys@sda21(r13)
 /* 801F968C 001F65CC  48 22 9C D1 */	bl heapStatusStart__6SystemFPcP7JKRHeap
 /* 801F9690 001F65D0  7F E3 FB 78 */	mr r3, r31
-/* 801F9694 001F65D4  38 80 00 30 */	li r4, 0x30
+/* 801F9694 001F65D4  38 80 00 30 */	li r4, 0x10
 /* 801F9698 001F65D8  48 00 1C ED */	bl "alloc__Q24Game48FixedSizePelletMgr<Q34Game12PelletNumber6Object>Fi"
 /* 801F969C 001F65DC  7F E3 FB 78 */	mr r3, r31
 /* 801F96A0 001F65E0  38 80 00 00 */	li r4, 0
