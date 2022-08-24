@@ -41,5 +41,16 @@ void allowSkipTreasureCutscene(MoviePlayer* movieplayer)
 		}
 	}
 }
-
 }; // namespace Game
+
+namespace mod {
+
+// adjust treasure culling radius to 50.0f if radius was zero
+float adjustBoundingRadius(float radius)
+{
+	if (radius == 0.0f)
+		return 50.0f;
+	else
+		return radius;
+}
+}; // namespace mod

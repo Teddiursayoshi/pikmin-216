@@ -8220,7 +8220,7 @@ lbl_8014ED14:
 /* 8014ED24 0014BC64  4E 80 04 21 */	bctrl 
 /* 8014ED28 0014BC68  88 03 02 B8 */	lbz r0, 0x2b8(r3)
 /* 8014ED2C 0014BC6C  7C 7E 1B 78 */	mr r30, r3
-/* 8014ED30 0014BC70  2C 00 00 05 */	cmpwi r0, 3
+/* 8014ED30 0014BC70  2C 00 00 05 */	cmpwi r0, 5
 /* 8014ED34 0014BC74  40 82 00 10 */	bne lbl_8014ED44
 /* 8014ED38 0014BC78  38 80 00 00 */	li r4, 0
 /* 8014ED3C 0014BC7C  4B FE CD 15 */	bl movie_begin__Q24Game8CreatureFb
@@ -12664,10 +12664,10 @@ lbl_80150E04:
 /* 80150E1C 0014DD5C  3C 80 80 4B */	lis r4, __vt__Q24Game11GameMessage@ha
 /* 80150E20 0014DD60  3C 60 80 4B */	lis r3, __vt__Q24Game21GameMessageVsAddEnemy@ha
 /* 80150E24 0014DD64  38 04 05 90 */	addi r0, r4, __vt__Q24Game11GameMessage@l
-/* 80150E28 0014DD68  38 A0 00 37 */	li r5, 0x37
+/* 80150E28 0014DD68  38 A0 00 37 */	li r5, 0x1d
 /* 80150E2C 0014DD6C  90 01 00 88 */	stw r0, 0x88(r1)
 /* 80150E30 0014DD70  38 83 61 6C */	addi r4, r3, __vt__Q24Game21GameMessageVsAddEnemy@l
-/* 80150E34 0014DD74  38 00 00 04 */	li r0, 4
+/* 80150E34 0014DD74  38 00 00 04 */	li r0, 2
 /* 80150E38 0014DD78  7F E3 FB 78 */	mr r3, r31
 /* 80150E3C 0014DD7C  90 81 00 88 */	stw r4, 0x88(r1)
 /* 80150E40 0014DD80  38 81 00 88 */	addi r4, r1, 0x88
@@ -12680,10 +12680,10 @@ lbl_80150E04:
 /* 80150E5C 0014DD9C  3C 80 80 4B */	lis r4, __vt__Q24Game11GameMessage@ha
 /* 80150E60 0014DDA0  3C 60 80 4B */	lis r3, __vt__Q24Game21GameMessageVsAddEnemy@ha
 /* 80150E64 0014DDA4  38 04 05 90 */	addi r0, r4, __vt__Q24Game11GameMessage@l
-/* 80150E68 0014DDA8  38 A0 00 17 */	li r5, 0x17
+/* 80150E68 0014DDA8  38 A0 00 17 */	li r5, 0x20
 /* 80150E6C 0014DDAC  90 01 00 7C */	stw r0, 0x7c(r1)
 /* 80150E70 0014DDB0  38 83 61 6C */	addi r4, r3, __vt__Q24Game21GameMessageVsAddEnemy@l
-/* 80150E74 0014DDB4  38 00 00 04 */	li r0, 4
+/* 80150E74 0014DDB4  38 00 00 04 */	li r0, 2
 /* 80150E78 0014DDB8  7F E3 FB 78 */	mr r3, r31
 /* 80150E7C 0014DDBC  90 81 00 7C */	stw r4, 0x7c(r1)
 /* 80150E80 0014DDC0  38 81 00 7C */	addi r4, r1, 0x7c
@@ -12696,10 +12696,10 @@ lbl_80150E04:
 /* 80150E9C 0014DDDC  3C 80 80 4B */	lis r4, __vt__Q24Game11GameMessage@ha
 /* 80150EA0 0014DDE0  3C 60 80 4B */	lis r3, __vt__Q24Game21GameMessageVsAddEnemy@ha
 /* 80150EA4 0014DDE4  38 04 05 90 */	addi r0, r4, __vt__Q24Game11GameMessage@l
-/* 80150EA8 0014DDE8  38 A0 00 13 */	li r5, 0x13
+/* 80150EA8 0014DDE8  38 A0 00 13 */	li r5, 0x44
 /* 80150EAC 0014DDEC  90 01 00 70 */	stw r0, 0x70(r1)
 /* 80150EB0 0014DDF0  38 83 61 6C */	addi r4, r3, __vt__Q24Game21GameMessageVsAddEnemy@l
-/* 80150EB4 0014DDF4  38 00 00 0C */	li r0, 0xc
+/* 80150EB4 0014DDF4  38 00 00 0C */	li r0, 0x3
 /* 80150EB8 0014DDF8  7F E3 FB 78 */	mr r3, r31
 /* 80150EBC 0014DDFC  90 81 00 70 */	stw r4, 0x70(r1)
 /* 80150EC0 0014DE00  38 81 00 70 */	addi r4, r1, 0x70
@@ -12712,7 +12712,7 @@ lbl_80150E04:
 /* 80150EDC 0014DE1C  3C 80 80 4B */	lis r4, __vt__Q24Game11GameMessage@ha
 /* 80150EE0 0014DE20  3C 60 80 4B */	lis r3, __vt__Q24Game21GameMessageVsAddEnemy@ha
 /* 80150EE4 0014DE24  38 04 05 90 */	addi r0, r4, __vt__Q24Game11GameMessage@l
-/* 80150EE8 0014DE28  38 A0 00 5D */	li r5, 0x5d
+/* 80150EE8 0014DE28  38 A0 00 5D */	li r5, 0x3a
 /* 80150EEC 0014DE2C  90 01 00 64 */	stw r0, 0x64(r1)
 /* 80150EF0 0014DE30  38 83 61 6C */	addi r4, r3, __vt__Q24Game21GameMessageVsAddEnemy@l
 /* 80150EF4 0014DE34  38 00 00 02 */	li r0, 2
@@ -12728,10 +12728,10 @@ lbl_80150E04:
 /* 80150F1C 0014DE5C  3C 80 80 4B */	lis r4, __vt__Q24Game11GameMessage@ha
 /* 80150F20 0014DE60  3C 60 80 4B */	lis r3, __vt__Q24Game21GameMessageVsAddEnemy@ha
 /* 80150F24 0014DE64  38 04 05 90 */	addi r0, r4, __vt__Q24Game11GameMessage@l
-/* 80150F28 0014DE68  38 A0 00 18 */	li r5, 0x18
+/* 80150F28 0014DE68  38 A0 00 18 */	li r5, 0x3b
 /* 80150F2C 0014DE6C  90 01 00 58 */	stw r0, 0x58(r1)
 /* 80150F30 0014DE70  38 83 61 6C */	addi r4, r3, __vt__Q24Game21GameMessageVsAddEnemy@l
-/* 80150F34 0014DE74  38 00 00 04 */	li r0, 4
+/* 80150F34 0014DE74  38 00 00 04 */	li r0, 2
 /* 80150F38 0014DE78  7F E3 FB 78 */	mr r3, r31
 /* 80150F3C 0014DE7C  90 81 00 58 */	stw r4, 0x58(r1)
 /* 80150F40 0014DE80  38 81 00 58 */	addi r4, r1, 0x58
@@ -12744,10 +12744,10 @@ lbl_80150E04:
 /* 80150F5C 0014DE9C  3C 80 80 4B */	lis r4, __vt__Q24Game11GameMessage@ha
 /* 80150F60 0014DEA0  3C 60 80 4B */	lis r3, __vt__Q24Game21GameMessageVsAddEnemy@ha
 /* 80150F64 0014DEA4  38 04 05 90 */	addi r0, r4, __vt__Q24Game11GameMessage@l
-/* 80150F68 0014DEA8  38 A0 00 19 */	li r5, 0x19
+/* 80150F68 0014DEA8  38 A0 00 19 */	li r5, 0x3c
 /* 80150F6C 0014DEAC  90 01 00 4C */	stw r0, 0x4c(r1)
 /* 80150F70 0014DEB0  38 83 61 6C */	addi r4, r3, __vt__Q24Game21GameMessageVsAddEnemy@l
-/* 80150F74 0014DEB4  38 00 00 04 */	li r0, 4
+/* 80150F74 0014DEB4  38 00 00 04 */	li r0, 2
 /* 80150F78 0014DEB8  7F E3 FB 78 */	mr r3, r31
 /* 80150F7C 0014DEBC  90 81 00 4C */	stw r4, 0x4c(r1)
 /* 80150F80 0014DEC0  38 81 00 4C */	addi r4, r1, 0x4c
@@ -12763,7 +12763,7 @@ lbl_80150E04:
 /* 80150FA8 0014DEE8  38 A0 00 0E */	li r5, 0xe
 /* 80150FAC 0014DEEC  90 01 00 40 */	stw r0, 0x40(r1)
 /* 80150FB0 0014DEF0  38 83 61 6C */	addi r4, r3, __vt__Q24Game21GameMessageVsAddEnemy@l
-/* 80150FB4 0014DEF4  38 00 00 14 */	li r0, 0x14
+/* 80150FB4 0014DEF4  38 00 00 14 */	li r0, 0x0
 /* 80150FB8 0014DEF8  7F E3 FB 78 */	mr r3, r31
 /* 80150FBC 0014DEFC  90 81 00 40 */	stw r4, 0x40(r1)
 /* 80150FC0 0014DF00  38 81 00 40 */	addi r4, r1, 0x40

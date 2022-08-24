@@ -9,7 +9,7 @@ struct VsOtakaraName {
 };
 
 const char* VsOtakaraName::cCoin         = "flower_red";
-const char* VsOtakaraName::cBedamaBlue   = "be_dama_blue_l";
-const char* VsOtakaraName::cBedamaRed    = "be_dama_red_l";
-const char* VsOtakaraName::cBedamaYellow = "be_dama_yellow_l";
-float VsOtakaraName::cBedamaYellowDepth  = 20.0f;
+const char* VsOtakaraName::cBedamaBlue   = "teala_dia_e";
+const char* VsOtakaraName::cBedamaRed    = "teala_dia_a";
+const char* VsOtakaraName::cBedamaYellow = "teala_dia_b";
+float VsOtakaraName::cBedamaYellowDepth  = 3.0f;
