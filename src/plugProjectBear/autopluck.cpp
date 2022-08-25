@@ -34,7 +34,7 @@ void allowSkipTreasureCutscene(MoviePlayer* movieplayer)
 		if (movieplayer->m_demoState == 6) {
 			isTreasureCutscene = false;
 			// OSReport("Treasure cutscene finished normally!");
-		} else if (((JUTGamePad::mPadStatus.m_stats->_00 & 0x1000) != 0) && (movieplayer->m_demoState == 5)) {
+		} else if (((JUTGamePad::mPadStatus[0].button & 0x1000) != 0) && (movieplayer->m_demoState == 5)) {
 			isTreasureCutscene = false;
 			movieplayer->skip();
 			// OSReport("Treasure cutscene skipped successfully!);
