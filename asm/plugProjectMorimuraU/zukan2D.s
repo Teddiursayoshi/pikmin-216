@@ -891,30 +891,30 @@ govNAN___Q24Game5P2JST:
 	.float 0.0
 .global mCategoryArray__Q28Morimura10TItemZukan
 mCategoryArray__Q28Morimura10TItemZukan: # treasure id of final category member
-	.4byte 7	# Succulent Series
-	.4byte 16	# Nature's Candy Series
-	.4byte 22	# Xenoflora Series
-	.4byte 27	# Gourmet Series
-	.4byte 42	# Sweet Tooth Series
-	.4byte 51	# Paleontology Series
-	.4byte 57	# Ancient Secrets Series
-	.4byte 63	# Cook's Arsenal Series
-	.4byte 71	# Tortured Artist Series
-	.4byte 79	# Modern Amenities Series
-	.4byte 86	# Frigid Series
-	.4byte 94	# Hyper-technology Series
-	.4byte 103	# Industrial Set
-	.4byte 109	# Husband's Tears Series
-	.4byte 120	# Space Love Series
-	.4byte 126	# Crystallized Emotion Series
-	.4byte 146	# Dream Series
-	.4byte 156	# Blast from the Past Series
-	.4byte 160	# Mystical Energy Series
-	.4byte 166	# Massive Receptacle Series
-	.4byte 168	# Survival Series
-	.4byte 176	# Ancient Ad Series
-	.4byte 183	# Odd Logo Series
-	.4byte 198	# Explorer's Friend Series
+	.4byte 10	# organic foods
+	.4byte 22	# pastries
+	.4byte 33	# forest
+	.4byte 45	# gemstones
+	.4byte 52	# ancient
+	.4byte 64	# big electronics
+	.4byte 73	# mario
+	.4byte 77	# abyss
+	.4byte 81	# gems 2 electric boogaloo
+	.4byte 90	# metal
+	.4byte 97	# hypertech
+	.4byte 106	# trinkets
+	.4byte 109	# zelda
+	.4byte 120	# ancient remains
+	.4byte 129	# snow stuff
+	.4byte 134	# food 2
+	.4byte 140	# fire stuff
+	.4byte 148	# marbles
+	.4byte 159	# ancient stuff
+	.4byte 163	# stars
+	.4byte 168	# creepy stuff
+	.4byte 180	# household
+	.4byte 187	# unknown household
+	.4byte 197	# unknown stuff
 	.4byte 216	# pokeball
 .global eIDInfo__8Morimura
 eIDInfo__8Morimura:
