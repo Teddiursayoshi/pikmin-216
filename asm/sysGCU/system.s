@@ -653,9 +653,9 @@ __ct__6SystemFv:
 /* 80422450 0041F390  93 CD 9A EC */	stw r30, sys@sda21(r13)
 /* 80422454 0041F394  98 0D 86 70 */	stb r0, sUseABXCommand@sda21(r13)
 /* 80422458 0041F398  48 00 0F BD */	bl initCurrentHeapMutex__6SystemFv
-/* 8042245C 0041F39C  3C 60 00 43 */	lis r3, 0x00428000@ha
+/* 8042245C 0041F39C  3C 60 00 43 */	lis r3, 0x00328000@ha
 /* 80422460 0041F3A0  83 ED 88 2C */	lwz r31, sCurrentHeap__7JKRHeap@sda21(r13)
-/* 80422464 0041F3A4  38 63 80 00 */	addi r3, r3, 0x00428000@l
+/* 80422464 0041F3A4  38 63 80 00 */	addi r3, r3, 0x00328000@l
 /* 80422468 0041F3A8  38 80 00 00 */	li r4, 0
 /* 8042246C 0041F3AC  38 A0 00 01 */	li r5, 1
 /* 80422470 0041F3B0  4B BF DA 59 */	bl create__10JKRExpHeapFUlP7JKRHeapb
