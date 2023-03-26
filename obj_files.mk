@@ -1197,3 +1197,5 @@ UTILITY:=\
 	
 BEAR:=\
 	$(BUILD_DIR)/src/plugProjectBear/autopluck.o\
+	$(BUILD_DIR)/src/plugProjectBear/ZukanColors.o\
+
