@@ -1,6 +1,10 @@
 #ifndef _MORIMURA_TITEMZUKAN_H
 #define _MORIMURA_TITEMZUKAN_H
 
+#include "Graphics.h"
+#include "Morimura/TTestBase.h"
+#include "JSystem/J2D/J2DPane.h"
+
 /*
     __vt__Q28Morimura10TItemZukan:
     .4byte 0
@@ -234,37 +238,40 @@ struct TScrollList {
 } // namespace Morimura
 
 namespace Morimura {
-struct TItemZukan : public CNode, public ObjBase, public TTestBase, public TZukanBase, public TScrollList {
-	virtual ~TItemZukan();                        // _08 (weak)
-	virtual void _10() = 0;                       // _10
-	virtual void _14() = 0;                       // _14
-	virtual void doCreate(JKRArchive*);           // _4C
-	virtual void doUpdate();                      // _58
-	virtual void getDispMemberBase();             // _78 (weak)
-	virtual void isListShow(int);                 // _7C
-	virtual void getIdMax();                      // _88
-	virtual void getNameID(int);                  // _8C
-	virtual void getUpdateIndex(int&, bool);      // _90
-	virtual void setShortenIndex(int, int, bool); // _94
-	virtual void doUpdateOut();                   // _9C
-	virtual void doDemoDraw(Graphics&);           // _AC
-	virtual void getCategoryColorId(int);         // _B0 (weak)
-	virtual void getDispDataZukan();              // _B4 (weak)
-	virtual void isComplete();                    // _BC
-	virtual void setXWindow();                    // _C0
-	virtual void setYWindow();                    // _C4
-	virtual void getXMsgID(int);                  // _C8
-	virtual void getYMsgID(int);                  // _CC
-	virtual void setDetail();                     // _D0
-	virtual void getModelIndex(int);              // _D4
-	virtual void isOpenConfirmWindow();           // _DC
-	virtual void openConfirmWindow();             // _E0
-	virtual void isNewSupply(int, bool);          // _E4
-	virtual void isPanelExist();                  // _E8
+struct TItemZukan : public CNode, public Screen::ObjBase, public TTestBase, public TZukanBase, public TScrollList {
+	virtual ~TItemZukan();                                   // _08 (weak)
+	virtual void doCreate(JKRArchive*);                      // _4C
+	virtual bool doUpdate();                                 // _58
+	virtual og::Screen::DispMemberBase* getDispMemberBase(); // _78 (weak)
+	virtual bool isListShow(int);                            // _7C
+	virtual void getIdMax();                                 // _88
+	virtual void getNameID(int);                             // _8C
+	virtual void getUpdateIndex(int&, bool);                 // _90
+	virtual void setShortenIndex(int, int, bool);            // _94
+	virtual void doUpdateOut();                              // _9C
+	virtual void doDemoDraw(Graphics&);                      // _AC
+	virtual void getCategoryColorId(int);                    // _B0 (weak)
+	virtual void getDispDataZukan();                         // _B4 (weak)
+	virtual bool isComplete();                               // _BC
+	virtual void setXWindow();                               // _C0
+	virtual void setYWindow();                               // _C4
+	virtual void getXMsgID(int);                             // _C8
+	virtual void getYMsgID(int);                             // _CC
+	virtual void setDetail();                                // _D0
+	virtual void getModelIndex(int);                         // _D4
+	virtual bool isOpenConfirmWindow();                      // _DC
+	virtual void openConfirmWindow();                        // _E0
+	virtual bool isNewSupply(int, bool);                     // _E4
+	virtual bool isPanelExist();                             // _E8
 
 	void demoSet();
 	void getPrice(int);
 	void getWeight(int);
+
+	// _00      = VTBL1
+	// _18      = VTBL2
+	// _00-_248 = TZukanBase
+	u8 _248[0x174]; // _248, TODO: fill in from ghidra
 };
 } // namespace Morimura
 

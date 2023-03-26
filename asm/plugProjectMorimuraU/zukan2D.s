@@ -12368,6 +12368,7 @@ doCreate__Q28Morimura10TItemZukanFP10JKRArchive:
 /* 80378F4C 00375E8C  48 09 2F 25 */	bl __ct__Q32kh6Screen14khUtilColorAnmFPQ29P2DScreen3MgrUxii
 /* 80378F50 00375E90  7C 60 1B 78 */	mr r0, r3
 lbl_80378F54:
+bl setColors__Q28Morimura10TItemZukanFv
 /* 80378F54 00375E94  90 1F 02 4C */	stw r0, 0x24c(r31)
 /* 80378F58 00375E98  38 00 00 01 */	li r0, 1
 /* 80378F5C 00375E9C  7F E3 FB 78 */	mr r3, r31
