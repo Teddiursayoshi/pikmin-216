@@ -448,8 +448,8 @@ lbl_8011B368:
 lbl_8011B388:
 /* 8011B388 001182C8  C3 A2 98 20 */	lfs f28, lbl_80517B80@sda21(r2)
 /* 8011B38C 001182CC  C3 82 98 1C */	lfs f29, lbl_80517B7C@sda21(r2)
-/* 8011B390 001182D0  C3 E2 98 2C */	lfs f30, lbl_80517B8C@sda21(r2)
-/* 8011B394 001182D4  C3 C2 98 30 */	lfs f31, lbl_80517B90@sda21(r2)
+/* 8011B390 001182D0  C3 E2 98 2C */	lfs f31, lbl_80517B8C@sda21(r2)
+/* 8011B394 001182D4  C3 C2 98 30 */	lfs f30, lbl_80517B90@sda21(r2)
 lbl_8011B398:
 /* 8011B398 001182D8  88 1F 00 15 */	lbz r0, 0x15(r31)
 /* 8011B39C 001182DC  3C 80 80 4B */	lis r4, "sColorTableNumerator__26@unnamed@carryInfoMgr_cpp@"@ha
