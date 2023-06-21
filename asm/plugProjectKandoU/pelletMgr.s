@@ -3540,7 +3540,6 @@ getCarryInfoParam__Q24Game6PelletFR14CarryInfoParam:
 /* 80167E74 00164DB4  EC 01 00 2A */	fadds f0, f1, f0
 /* 80167E78 00164DB8  D0 1F 00 10 */	stfs f0, 0x10(r31)
 /* 80167E7C 00164DBC  98 1F 00 14 */	stb r0, 0x14(r31)
-li r0, 0
 /* 80167E80 00164DC0  90 1F 00 1C */	stw r0, 0x1c(r31)
 /* 80167E84 00164DC4  48 00 2A ED */	bl getTotalCarryPikmins__Q24Game6PelletFv
 /* 80167E88 00164DC8  B0 7F 00 18 */	sth r3, 0x18(r31)
