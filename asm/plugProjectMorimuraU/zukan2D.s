@@ -891,31 +891,31 @@ govNAN___Q24Game5P2JST:
 	.float 0.0
 .global mCategoryArray__Q28Morimura10TItemZukan
 mCategoryArray__Q28Morimura10TItemZukan: # treasure id of final category member
-	.4byte 10	# organic foods
-	.4byte 22	# pastries
-	.4byte 33	# forest
-	.4byte 45	# gemstones
-	.4byte 52	# ancient
-	.4byte 64	# big electronics
-	.4byte 73	# mario
-	.4byte 77	# abyss
-	.4byte 81	# gems 2 electric boogaloo
-	.4byte 90	# metal
-	.4byte 97	# hypertech
-	.4byte 106	# trinkets
-	.4byte 109	# zelda
-	.4byte 120	# ancient remains
-	.4byte 129	# snow stuff
-	.4byte 134	# food 2
-	.4byte 140	# fire stuff
-	.4byte 148	# marbles
-	.4byte 159	# ancient stuff
-	.4byte 163	# stars
-	.4byte 168	# creepy stuff
-	.4byte 180	# household
-	.4byte 187	# unknown household
-	.4byte 197	# unknown stuff
-	.4byte 216	# pokeball
+	.4byte 10	# fruits
+	.4byte 24	# pastries
+	.4byte 35	# earth items
+	.4byte 47	# gemstones
+	.4byte 51	# essences
+	.4byte 68	# super mario
+	.4byte 72	# zelda
+	.4byte 82	# modern electronics
+	.4byte 97	# old electronics
+	.4byte 107	# ancient mechanics
+	.4byte 122	# civilization remains
+	.4byte 133	# prehistoric relics
+	.4byte 141	# future lens
+	.4byte 147	# apocalpyse entertainment
+	.4byte 152	# mystical
+	.4byte 161	# void
+	.4byte 164	# otherworldly gourmet
+	.4byte 172	# winter
+	.4byte 184	# household
+	.4byte 189	# secrets of time
+	.4byte 196	# interdimensional warfare
+	.4byte 216	# pokemon
+	.4byte 217	# extra
+	.4byte 218	# extra
+	.4byte 219	# extra
 .global eIDInfo__8Morimura
 eIDInfo__8Morimura:
 	.4byte 0x00000000
